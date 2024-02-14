@@ -23,15 +23,15 @@ class QsTile : TileService() {
 
     override fun onClick() {
         val tile: Tile = qsTile
-            tile.state = Tile.STATE_ACTIVE
+        tile.state = Tile.STATE_ACTIVE
 
-            coroutineScope.launch {
-                val  response = login("your_username","your_password")
-                Toast.makeText(applicationContext, parseLoginResponse(response),Toast.LENGTH_SHORT).show()
-            }
-            Log.d(tag, "Tile is Pressed")
+        coroutineScope.launch {
+            val response = login(username, password)
+            Toast.makeText(applicationContext, parseLoginResponse(response), Toast.LENGTH_SHORT)
+                    .show()
+        }
+        Log.d(tag, "Tile is Pressed")
     }
-
 
     private fun updateTileIcon(tile: Tile) {
         val iconResId: Int = R.drawable.icon
@@ -40,7 +40,7 @@ class QsTile : TileService() {
     }
 }
 
- fun parseLoginResponse(response: String): String {
+fun parseLoginResponse(response: String): String {
     // Parse the XML response and extract the message
     val xml = response.trim()
     val start = xml.indexOf("<message><![CDATA[") + "<message><![CDATA[".length
