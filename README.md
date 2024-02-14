@@ -20,9 +20,8 @@ To install the application, follow these steps:
 
 2. Open the project in Android Studio.
 
-3. Add your username and password in the `MainActivity.kt` file.
-
-4. Build and run the application on your Android device.
+3. Build and run the application on your Android device.
+4. login with your credentials for the first time then hide the app from laucher, then add Tile in Your QuickSetting
 
 ## Usage
 
