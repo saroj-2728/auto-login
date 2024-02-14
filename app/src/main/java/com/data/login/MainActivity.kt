@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     fun onLoginButtonClick(view: View) {
         var response =""
         lifecycleScope.launch {
-           response =  login("raju", "raju")
+           response =  login("your_username", "your_password")
             Log.d("check-login",response)
             Toast.makeText(this@MainActivity, parseLoginResponse(response), Toast.LENGTH_SHORT).show()
         }
