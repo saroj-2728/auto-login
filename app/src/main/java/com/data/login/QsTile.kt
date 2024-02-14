@@ -1,5 +1,6 @@
 package com.data.login
 
+import android.content.Context
 import android.graphics.drawable.Icon
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
@@ -24,11 +25,17 @@ class QsTile : TileService() {
     override fun onClick() {
         val tile: Tile = qsTile
         tile.state = Tile.STATE_ACTIVE
-
+            LoginUtils.initializeEncryptedSharedPreferences(this)
+            val data =  LoginUtils.getLastLoggedInUser(this)
         coroutineScope.launch {
-            val response = login(username, password)
-            Toast.makeText(applicationContext, parseLoginResponse(response), Toast.LENGTH_SHORT)
-                    .show()
+            if(data!=null){
+            val response = login( data.first, data.second)
+                Toast.makeText(applicationContext, parseLoginResponse(response), Toast.LENGTH_SHORT).show()
+            }
+            else   {
+                Toast.makeText(applicationContext, "login from your id and pass from app for first time", Toast.LENGTH_SHORT).show()
+            }
+
         }
         Log.d(tag, "Tile is Pressed")
     }
