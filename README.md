@@ -14,13 +14,14 @@ To install the application, follow these steps:
 
 1. Clone the repository to your local machine:
 
-    ```bash
-    git clone https://github.com/sujanbimali9/PulchowkLogin.git
-    ```
+   ```bash
+   git clone https://github.com/sujanbimali9/PulchowkLogin.git
+   ```
 
 2. Open the project in Android Studio.
 
 3. Build and run the application on your Android device.
+
 4. login with your credentials for the first time then hide the app from laucher, then add Tile in Your QuickSetting
 
 ## Usage
@@ -45,4 +46,3 @@ To install the application, follow these steps:
 ## Contributing
 
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or create a pull request.
-
