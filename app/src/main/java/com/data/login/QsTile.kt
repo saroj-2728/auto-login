@@ -26,7 +26,7 @@ class QsTile : TileService() {
             tile.state = Tile.STATE_ACTIVE
 
             coroutineScope.launch {
-                val  response = login("079bei042","2022-")
+                val  response = login("your_username","your_password")
                 Toast.makeText(applicationContext, parseLoginResponse(response),Toast.LENGTH_SHORT).show()
             }
             Log.d(tag, "Tile is Pressed")
