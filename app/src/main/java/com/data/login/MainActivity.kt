@@ -85,7 +85,6 @@ class MainActivity : AppCompatActivity() {
         val serviceIntent = Intent(this, WifiStateService::class.java)
         startService(serviceIntent)
     }
-
 }
 
 
