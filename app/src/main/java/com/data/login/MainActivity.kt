@@ -2,6 +2,7 @@ package com.data.login
 
 import android.app.AlertDialog
 import android.content.ComponentName
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
@@ -23,6 +24,8 @@ class MainActivity : AppCompatActivity() {
             findViewById<EditText>(R.id.loginUsername).setText(data.first)
             findViewById<EditText>(R.id.loginPassword).setText(data.second)
         }
+        startWifiStateService()
+
     }
 
     fun onLoginButtonClick(view: View) {
@@ -78,6 +81,12 @@ class MainActivity : AppCompatActivity() {
             PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
             PackageManager.DONT_KILL_APP
         )
+    } private fun startWifiStateService() {
+        val serviceIntent = Intent(this, WifiStateService::class.java)
+        startService(serviceIntent)
     }
 
 }
+
+
+
