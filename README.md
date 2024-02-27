@@ -1,12 +1,14 @@
 # Pulchowk Login
 
-**Pulchowk Login** is an Android application that provides a Quick Settings Tile for logging in to Pulchowk WiFi using a username and password. The Quick Settings Tile works on Android version 7 or above. For devices running on Android versions lower than 7, users can still log in using the app interface.
+**Pulchowk Login** is an Android application thatlogging in to Pulchowk WiFi using a username and password in the background reducing the hassle of logging it manually everytime
 
 ## Features
-
-- Quick Settings Tile for easy access to login functionality.
+- auto login in background when network changes.
 - Secure login using HTTPS.
 - Toast messages for displaying login status.
+
+## Note
+- continuous switching of network might reach your login limit.
 
 ## Installation
 
@@ -30,9 +32,6 @@ To install the application, follow these steps:
 1. whenever the network of device switches, app login the user if background.
 2. Upon successful login, a Toast message will indicate the login status.
 3. If the login fails, an appropriate error message will be displayed.
-
-## Note
-- continuous switching of network might reach your login limit.
 
 ## Configuration
 
