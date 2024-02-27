@@ -22,14 +22,17 @@ To install the application, follow these steps:
 
 3. Build and run the application on your Android device.
 
-4. login with your credentials for the first time then hide the app from laucher, then add Tile in Your QuickSetting
+4. login with your credentials for the first time then hide the app from laucher.
 
 ## Usage
 
-1. Enable the Quick Settings Tile for **Pulchowk Login** in your device's settings.
-2. Tap the Quick Settings Tile to initiate the login process.
-3. Upon successful login, a Toast message will indicate the login status.
-4. If the login fails, an appropriate error message will be displayed.
+
+1. whenever the network of device switches, app login the user if background.
+2. Upon successful login, a Toast message will indicate the login status.
+3. If the login fails, an appropriate error message will be displayed.
+
+## Note
+- continuous switching of network might reach your login limit.
 
 ## Configuration
 
