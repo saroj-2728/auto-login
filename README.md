@@ -3,7 +3,7 @@
 **Pulchowk Login** is an Android application thatlogging in to Pulchowk WiFi using a username and password in the background reducing the hassle of logging it manually everytime
 
 ## Features
-- auto login in background when network changes.
+- Auto login in background when network changes.
 - Secure login using HTTPS.
 - Toast messages for displaying login status.
 
