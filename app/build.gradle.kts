@@ -17,6 +17,16 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    // Add this signingConfigs block
+    signingConfigs {
+        create("release") {
+            storeFile = file("/home/saroj/Code-Playground/Android/keystores/auto-login.jks")
+            storePassword = "auto-login"  // Or use keystoreProperties["keystore.password"] as String
+            keyAlias = "wifi-auto-login"
+            keyPassword = "wifi-auto-login"  // Or use keystoreProperties["keystore.key.password"] as String
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -42,6 +52,7 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation ("androidx.security:security-crypto:1.1.0-alpha06")
+    implementation("com.google.code.gson:gson:2.10.1")
     testImplementation("junit:junit:4.13.2")
     implementation ("androidx.work:work-runtime:2.9.0")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

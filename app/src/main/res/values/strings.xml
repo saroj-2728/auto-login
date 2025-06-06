@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Login</string>
     <string name="login">Login</string>
-    <string name="username">username</string>
-    <string name="password">password</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="username_hint">Enter Username</string>
+    <string name="password_hint">Enter Password</string>
+    <string name="saved_accounts">Saved Accounts</string>
+    <string name="show_saved_accounts">Show Saved Accounts</string>
+    <string name="hide_saved_accounts">Hide Saved Accounts</string>
+    <string name="no_saved_accounts">No saved accounts found.</string>
+    <string name="delete">Delete</string>
+    <string name="known_networks">Known Networks</string>
 </resources>
